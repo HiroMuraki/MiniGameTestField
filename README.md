@@ -61,6 +61,10 @@ event Action<int> GameCompleted;
    具体的关闭操作由于事件注册者决定*/
 event Action CloseRequested;
 
+/* 主相机，如果小游戏内需要使用主相机，请访问此相机 */
+Camera MainCamera; 
+/* 小游戏的UI相机，如果小游戏内需要使用UI相机，请访问此相机（多用于Canvas） */
+Camera UICamera; 
 
 /* 载入小游戏的方法，在主环境请求加载小游戏时将调用此方法，并传递一个onCompleted回调与loadMode
    对于onCompleted，请确保在方法实现中调用此方法
