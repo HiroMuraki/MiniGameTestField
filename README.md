@@ -61,7 +61,7 @@ event Action<int> GameCompleted;
    具体的关闭操作由于事件注册者决定*/
 event Action CloseRequested;
 
-/* 主相机，如果小游戏内需要使用主相机，请访问此相机 */
+/* 小游戏的主相机，如果小游戏内需要使用主相机，请访问此相机 */
 Camera MainCamera; 
 /* 小游戏的UI相机，如果小游戏内需要使用UI相机，请访问此相机（多用于Canvas） */
 Camera UICamera; 

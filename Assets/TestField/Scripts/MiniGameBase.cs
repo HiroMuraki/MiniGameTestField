@@ -12,7 +12,13 @@ namespace TestField {
         /// </summary>
         public event Action CloseRequested;
 
+        /// <summary>
+        /// 小游戏的主相机，如果小游戏内需要使用主相机，请访问此相机
+        /// </summary>
         public Camera MainCamera { get; set; }
+        /// <summary>
+        /// 小游戏的UI相机，如果小游戏内需要使用UI相机，请访问此相机
+        /// </summary>
         public Camera UICamera { get; set; }
 
         /// <summary>
