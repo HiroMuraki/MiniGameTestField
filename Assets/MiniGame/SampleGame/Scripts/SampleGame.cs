@@ -9,7 +9,6 @@ namespace TestField {
     public class SampleGame : MiniGameBase {
         public Text MessageDisplayer;
         public GameObject Ball;
-        public Camera Camera;
 
         void Start() {
             // 侦听所有Wall的碰撞事件，当小球碰撞到墙后引发GameCompleted事件，并简单地将墙的ID作为返回码
@@ -68,6 +67,8 @@ namespace TestField {
         public override void LoadGame(Action onCompleted, MiniGameLoadMode loadMode) {
             // 此类中有一个字段用于储存当前的游戏载入模式（因为在其他地方需要根据此字段的值调整行为）
             _gameMode = loadMode;
+            // 设置UI的Camera
+            transform.Find("MiniGame UI").GetComponent<Canvas>().worldCamera = UICamera;
 
             // !!! 仅作为简单示例，如果是FromVisualNovel模式，则载入时小球为蓝色，从营地载入时小球为红色
             // !!! 在实际实现中，你的小游戏应该需要根据loadMode的值禁用/启用某些操作，如设置/排行榜/关闭/难度选择等

@@ -12,6 +12,9 @@ namespace TestField {
         /// </summary>
         public event Action CloseRequested;
 
+        public Camera MainCamera { get; set; }
+        public Camera UICamera { get; set; }
+
         /// <summary>
         /// 载入游戏前调用
         /// </summary>

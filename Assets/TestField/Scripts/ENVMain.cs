@@ -4,6 +4,8 @@ using UnityEngine.UI;
 namespace TestField {
     public class ENVMain : MonoBehaviour {
         public Text MessageDisplayer;
+        public Camera MiniGameCamera;
+        public Camera MiniGameUICamera;
 
         void Awake() {
             // 获取对当前小游戏的引用，方便后续操作
@@ -13,6 +15,8 @@ namespace TestField {
             }
         }
         void Start() {
+            _game.MainCamera = MiniGameCamera;
+            _game.UICamera = MiniGameUICamera;
             // 侦听小游戏的GameCompleted事件，触发后显示信息并关闭小游戏
             _game.GameCompleted += (status) => {
                 MessageDisplayer.text = $"侦测到小游戏完成并返回状态码{status}";

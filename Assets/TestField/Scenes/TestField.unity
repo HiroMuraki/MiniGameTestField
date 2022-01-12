@@ -319,20 +319,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 520527786844708066, guid: fb8d204930467cd499da730205408005,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 459934634}
     - target: {fileID: 520527787180716497, guid: fb8d204930467cd499da730205408005,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -212.69998
+      value: -212.69995
       objectReference: {fileID: 0}
     - target: {fileID: 520527787353991891, guid: fb8d204930467cd499da730205408005,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -212.68192
+      value: -212.68188
       objectReference: {fileID: 0}
     - target: {fileID: 520527788283361104, guid: fb8d204930467cd499da730205408005,
         type: 3}
@@ -1825,6 +1820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MessageDisplayer: {fileID: 1254242647}
+  MiniGameCamera: {fileID: 541455158}
+  MiniGameUICamera: {fileID: 459934634}
 --- !u!114 &1794564613
 MonoBehaviour:
   m_ObjectHideFlags: 0
